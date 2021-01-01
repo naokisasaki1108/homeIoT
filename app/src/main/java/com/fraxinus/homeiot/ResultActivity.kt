@@ -11,9 +11,21 @@ class ResultActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
+        var sendCommand: PostAsyncTask? = null
+
         setSupportActionBar(toolbar)
         supportActionBar?.run {
             setDisplayHomeAsUpEnabled(false)
+        }
+
+
+        lightON.setOnClickListener {
+            sendCommand = PostAsyncTask()
+            sendCommand?.execute("light","on")
+        }
+        lightOFF.setOnClickListener {
+            sendCommand = PostAsyncTask()
+            sendCommand?.execute("light","off")
         }
 
         returnButton.setOnClickListener {
