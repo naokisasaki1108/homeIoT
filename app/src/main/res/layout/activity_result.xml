@@ -49,13 +49,84 @@
         android:layout_marginTop="99dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="528dp"
-        android:text="@string/result_return_button_label"
+        android:text="@string/cmd_btn_on"
         android:textSize="12sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/lightOFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appbarLayout"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/airAUTO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="121dp"
+        android:text="@string/cmd_btn_auto"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/airSTOP"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lightON"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/airSTOP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="41dp"
+        android:text="@string/cmd_btn_off"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/airAUTO"
+        app:layout_constraintTop_toBottomOf="@+id/lightOFF"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/airDRY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/cmd_btn_dry"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/airSTOP"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/airCLOD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/cmd_btn_cold"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/airAUTO"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/airHOT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="58dp"
+        android:text="@string/cmd_btn_hot"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/airAUTO"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -66,13 +137,14 @@
         android:layout_marginTop="99dp"
         android:layout_marginEnd="41dp"
         android:layout_marginBottom="472dp"
-        android:text="@string/result_return_button_label"
+        android:text="@string/cmd_btn_off"
         android:textSize="12sp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/returnButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/lightON"
         app:layout_constraintTop_toBottomOf="@+id/appbarLayout"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

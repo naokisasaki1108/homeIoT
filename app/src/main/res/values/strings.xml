@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">homeIoT</string>
-    <string name="title">Biometric Prompt サンプル</string>
+    <string name="title">リモコンですよ</string>
 
     <string name="main_next_screen_description">次の画面に進むには認証が必要です。\n端末に登録された指紋または以下のPINを入力してください。</string>
     <string name="main_pin_code_label">PINコード: %1$s</string>
@@ -20,4 +20,11 @@
 
     <string name="result_success_label">認証成功です！</string>
     <string name="result_return_button_label">最初の画面に戻る</string>
+
+    <string name="cmd_btn_on">ON</string>
+    <string name="cmd_btn_off">OFF</string>
+    <string name="cmd_btn_auto">AUTO</string>
+    <string name="cmd_btn_cold">COLD</string>
+    <string name="cmd_btn_dry">DRY</string>
+    <string name="cmd_btn_hot">HOT</string>
 </resources>

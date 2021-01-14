@@ -27,6 +27,26 @@ class ResultActivity: AppCompatActivity() {
             sendCommand = PostAsyncTask()
             sendCommand?.execute("light","off")
         }
+        airAUTO.setOnClickListener {
+            sendCommand = PostAsyncTask()
+            sendCommand?.execute("air","auto")
+        }
+        airSTOP.setOnClickListener {
+            sendCommand = PostAsyncTask()
+            sendCommand?.execute("air","stop")
+        }
+        airDRY.setOnClickListener {
+            sendCommand = PostAsyncTask()
+            sendCommand?.execute("air","dry")
+        }
+        airCLOD.setOnClickListener {
+            sendCommand = PostAsyncTask()
+            sendCommand?.execute("air","cold")
+        }
+        airHOT.setOnClickListener {
+            sendCommand = PostAsyncTask()
+            sendCommand?.execute("air","hot")
+        }
 
         returnButton.setOnClickListener {
             finish()

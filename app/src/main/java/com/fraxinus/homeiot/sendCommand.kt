@@ -13,8 +13,8 @@ import org.json.JSONObject
 class PostAsyncTask : AsyncTask<String, Void, String>() {
 
     override fun doInBackground(vararg p0: String?): String? {
-        //val url = "https://131.129.231.202:50351/commandExecute/"
-        val url = "https://192.168.1.210:50351/commandExecute/"
+        val url = "https://ns-bifrost.ml:50351/commandExecute/"
+        //val url = "https://192.168.1.210:50351/commandExecute/"
         val client: OkHttpClient = OkHttpClient()
 
         // create json

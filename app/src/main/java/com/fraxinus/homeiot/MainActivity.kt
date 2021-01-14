@@ -12,6 +12,7 @@ class MainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        AuthActivity.startForResult(this, REQUEST_CODE_TO_AUTH_ACTIVITY)
 
         Timber.plant(Timber.DebugTree())
         initView()
