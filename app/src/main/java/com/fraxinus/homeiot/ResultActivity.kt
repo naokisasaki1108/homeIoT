@@ -11,7 +11,7 @@ class ResultActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
-        var sendCommand: PostAsyncTask? = null
+        var sendCommand: codeSend? = null
 
         setSupportActionBar(toolbar)
         supportActionBar?.run {
@@ -20,37 +20,45 @@ class ResultActivity: AppCompatActivity() {
 
 
         lightON.setOnClickListener {
-            sendCommand = PostAsyncTask()
+            sendCommand = codeSend()
             sendCommand?.execute("light","on")
         }
         lightOFF.setOnClickListener {
-            sendCommand = PostAsyncTask()
+            sendCommand = codeSend()
             sendCommand?.execute("light","off")
         }
         airAUTO.setOnClickListener {
-            sendCommand = PostAsyncTask()
+            sendCommand = codeSend()
             sendCommand?.execute("air","auto")
         }
         airSTOP.setOnClickListener {
-            sendCommand = PostAsyncTask()
+            sendCommand = codeSend()
             sendCommand?.execute("air","stop")
         }
         airDRY.setOnClickListener {
-            sendCommand = PostAsyncTask()
+            sendCommand = codeSend()
             sendCommand?.execute("air","dry")
         }
         airCLOD.setOnClickListener {
-            sendCommand = PostAsyncTask()
+            sendCommand = codeSend()
             sendCommand?.execute("air","cold")
         }
         airHOT.setOnClickListener {
-            sendCommand = PostAsyncTask()
+            sendCommand = codeSend()
             sendCommand?.execute("air","hot")
+        }
+
+        timer.setOnClickListener {
+            startActivity(Intent(this,TimerActivity::class.java))
         }
 
         returnButton.setOnClickListener {
             finish()
         }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
     }
 
     companion object {

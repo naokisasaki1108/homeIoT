@@ -25,5 +25,8 @@
         <activity
             android:name=".ResultActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".TimerActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 </manifest>

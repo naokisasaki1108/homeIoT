@@ -27,4 +27,7 @@
     <string name="cmd_btn_cold">COLD</string>
     <string name="cmd_btn_dry">DRY</string>
     <string name="cmd_btn_hot">HOT</string>
+
+    <string name="start_timer">timer</string>
+
 </resources>
