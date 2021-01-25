@@ -57,10 +57,6 @@ class ResultActivity: AppCompatActivity() {
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-
-    }
-
     companion object {
         fun start(context: Context) = context.startActivity(Intent(context, ResultActivity::class.java))
     }
