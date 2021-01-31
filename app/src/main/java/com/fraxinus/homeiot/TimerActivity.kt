@@ -36,12 +36,21 @@ class TimerActivity : AppCompatActivity() {
         setTimer.setOnClickListener {
             if (setTime) {
                 sendCommand = sendTimer()
-                sendCommand!!.execute(setYear.toString(), setMonth.toString(), setDay.toString(), setHour.toString(), setMinute.toString())
+                sendCommand!!.execute(setYear.toString(), setMonth.toString(), setDay.toString(), setHour.toString(), setMinute.toString(),"on")
                 finish()
             }else{
                 timeView.text = "ここ入れて"
             }
 
+        }
+        cancelTimer.setOnClickListener{
+            if (setTime) {
+                sendCommand = sendTimer()
+                sendCommand!!.execute(setYear.toString(), setMonth.toString(), setDay.toString(), setHour.toString(), setMinute.toString(),"off")
+                finish()
+            }else{
+                timeView.text = "ここ入れて"
+            }
         }
     }
 

@@ -42,8 +42,6 @@ class codeSend : AsyncTask<String, Void, String>() {
             response?.close()
         }
 
-        Log.d("sendLocation", json.toString())
-
         return "complete"
     }
 
@@ -64,7 +62,7 @@ class sendTimer : AsyncTask<String, Void, String>() {
         target.put("hour", p0[3])
         target.put("minute",p0[4])
         val json = JSONObject()
-        json.put("state", "on")
+        json.put("state", p0[5])
         json.put("target", target.toString())
         json.put("key", "authkey")
 
