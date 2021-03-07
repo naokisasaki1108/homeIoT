@@ -36,7 +36,7 @@ class TimerActivity : AppCompatActivity() {
         setTimer.setOnClickListener {
             if (setTime) {
                 sendCommand = sendTimer()
-                sendCommand!!.execute(setYear.toString(), setMonth.toString(), setDay.toString(), setHour.toString(), "0","on")
+                sendCommand!!.execute(setYear.toString(), setMonth.toString(), setDay.toString(), setHour.toString(), setMinute.toString(),"on")
                 finish()
             }else{
                 timeView.text = "ここ入れて"
@@ -46,7 +46,7 @@ class TimerActivity : AppCompatActivity() {
         cancelTimer.setOnClickListener{
             if (setTime) {
                 sendCommand = sendTimer()
-                sendCommand!!.execute(setYear.toString(), setMonth.toString(), setDay.toString(), setHour.toString(), "0","off")
+                sendCommand!!.execute(setYear.toString(), setMonth.toString(), setDay.toString(), setHour.toString(), setMinute.toString(),"off")
                 finish()
             }else{
                 timeView.text = "ここ入れて"
@@ -58,7 +58,7 @@ class TimerActivity : AppCompatActivity() {
         val datePickerDialog = DatePickerDialog(
                 this,
                 DatePickerDialog.OnDateSetListener() {view, year, month, dayOfMonth->
-                    dateView.text = "選択した日付は「${year}/${month + 1}/${dayOfMonth}」です"
+                    dateView.text = "選択した日付は「${year}/${month}/${dayOfMonth}」です"
                     setYear = year
                     setMonth = month + 1
                     setDay = dayOfMonth

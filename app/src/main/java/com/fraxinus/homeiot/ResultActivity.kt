@@ -3,6 +3,7 @@ package com.fraxinus.homeiot
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_result.*
 
@@ -46,6 +47,10 @@ class ResultActivity: AppCompatActivity() {
         airHOT.setOnClickListener {
             sendCommand = codeSend()
             sendCommand?.execute("air","hot")
+        }
+        tvON.setOnClickListener {
+            sendCommand = codeSend()
+            sendCommand?.execute("tv","power")
         }
 
         timer.setOnClickListener {
